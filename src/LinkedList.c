@@ -549,7 +549,7 @@ int ll_sort(LinkedList* this, int (*pFunc)(void* ,void*), int order)
 
     return returnAux;
 }
-
+/*
 LinkedList* ll_map(LinkedList* this, void*(*pFunc)(void*))
 {
 	LinkedList* listaMapeada=NULL;
@@ -575,12 +575,12 @@ LinkedList* ll_map(LinkedList* this, void*(*pFunc)(void*))
 
 	return listaMapeada;
 }
-/*
+*/
 int ll_map(LinkedList* this, int(*pFunc)(void*))
 {
 	int returnValue=-1;
 	int i;
-	void* pElement;
+	void* pElement=NULL;
 
 	if(this!=NULL && pFunc!=NULL)
 	{
@@ -595,4 +595,4 @@ int ll_map(LinkedList* this, int(*pFunc)(void*))
 
 	return returnValue;
 }
-*/
+
