@@ -549,33 +549,7 @@ int ll_sort(LinkedList* this, int (*pFunc)(void* ,void*), int order)
 
     return returnAux;
 }
-/*
-LinkedList* ll_map(LinkedList* this, void*(*pFunc)(void*))
-{
-	LinkedList* listaMapeada=NULL;
-	void* pElement=NULL;
-	int i;
 
-	if(this!=NULL)
-	{
-		listaMapeada=ll_newLinkedList();
-		if(listaMapeada!=NULL)
-		{
-			for(i=0; i<ll_len(this); i++)
-			{
-				pElement=ll_get(this, i);
-				if(pElement!=NULL)
-				{
-					pElement=pFunc(pElement);
-					ll_add(listaMapeada, pElement);
-				}
-			}
-		}
-	}
-
-	return listaMapeada;
-}
-*/
 int ll_map(LinkedList* this, int(*pFunc)(void*))
 {
 	int returnValue=-1;
