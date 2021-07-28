@@ -184,18 +184,6 @@ int getEditorial_libro(eLibro* this, char* editorialLibro)
 	return retorno;
 }
 
-int imprimirUn_libro(eLibro* this)
-{
-	int retorno=-1;
-
-	if(this!=NULL)
-	{
-		printf("-> ID: %d | Titulo: %s | Autor: %s | Precio: %.2f | Editorial: %s", this->id, this->titulo, this->autor, this->precio, this->editorial);
-	}
-
-	return retorno;
-}
-
 int buscarId_libro(LinkedList* listaLibros, int idBuscado)
 {
 	int index;
@@ -245,23 +233,6 @@ int sortAutor_libro(void* libroUno, void* libroDos)
 	if(libroUno!=NULL && libroDos!=NULL)
 	{
 		if(strcmp(auxLibroUno->autor, auxLibroDos->autor)<0)
-		{
-			retorno=0;
-		}
-	}
-
-	return retorno;
-}
-
-int sortId_libro(void* libroUno, void* libroDos)
-{
-	int retorno=-1;
-	eLibro* auxLibroUno=(eLibro*)libroUno;
-	eLibro* auxLibroDos=(eLibro*)libroDos;
-
-	if(libroUno!=NULL && libroDos!=NULL)
-	{
-		if(auxLibroUno->id > auxLibroDos->id)
 		{
 			retorno=0;
 		}

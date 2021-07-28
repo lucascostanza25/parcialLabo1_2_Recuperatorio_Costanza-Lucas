@@ -46,15 +46,11 @@ int setEditorial_libro(eLibro* this, char* editorialLibro);
 
 int getEditorial_libro(eLibro* this, char* editorialLibro);
 
-int imprimirUn_libro(eLibro* this);
-
 int buscarId_libro(LinkedList* listaLibros, int idBuscado);
 
 int idAutomatico_libro(LinkedList* listaLibros, int* idAutomatico);
 
 int sortAutor_libro(void* libroUno, void* libroDos);
-
-int sortId_libro(void* libroUno, void* libroDos);
 
 int descuento_libro(void* libro);
 

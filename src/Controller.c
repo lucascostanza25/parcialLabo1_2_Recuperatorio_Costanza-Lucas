@@ -87,8 +87,7 @@ int controller_saveAsText(char* path , LinkedList* listaLibros)
 		pArchivo=fopen(path, "w");
 		if(pArchivo!=NULL)
 		{
-			//ll_map(listaLibros, descuento_libro);
-			//fprintf(pArchivo, "id,titulo,autor,precio,editorialId\n");
+			fprintf(pArchivo, "id,titulo,autor,precio,editorialId\n");
 			for(i=0; i<ll_len(listaLibros); i++)
 			{
 				libroGuardado=(eLibro*)ll_get(listaLibros, i);
